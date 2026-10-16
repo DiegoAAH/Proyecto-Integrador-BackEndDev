@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
+import { CatalogoModule } from './catalogo/catalogo.module';
 import { HealthController } from './health.controller';
 import { UsuariosModule } from './usuarios/usuarios.module';
 
@@ -23,6 +24,7 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     }),
     UsuariosModule,
     AuthModule,
+    CatalogoModule,
   ],
   controllers: [HealthController],
 })
