@@ -23,12 +23,6 @@ npm run start:dev            # API en http://localhost:3000/api
 
 Para levantar todo (API + base de datos) en contenedores: `docker compose up --build`.
 
-## Pruebas
-
-```bash
-npm test
-```
-
 ## Estructura
 
 ```
@@ -41,14 +35,12 @@ docs/                     documentación del avance
 
 Cada módulo de negocio vive en su propia carpeta dentro de `src/`:
 
-| Módulo | Qué hace |
-|---|---|
-| `auth`, `usuarios` | Registro, login con JWT, roles y administración de cuentas |
-| `catalogo` | Tiendas y productos |
-| `pedidos` | Checkout, máquina de estados, asignación de repartidor, incidencias e historial de eventos |
-| `notificaciones` | Canal en tiempo real (Socket.IO, namespace `/tiempo-real`) |
-
-Los módulos se comunican mediante eventos de dominio (`pedido.creado`, `pedido.estado_cambiado`, `pedido.asignado`, `pedido.incidencia`).
+| Módulo | Qué hace | Estado |
+|---|---|---|
+| `auth`, `usuarios` | Registro, login con JWT, roles y administración de cuentas | Listo |
+| `catalogo` | Tiendas y productos | Listo |
+| `pedidos` | Checkout, máquina de estados, asignación de repartidor, incidencias e historial de eventos | Siguiente avance |
+| `notificaciones` | Canal en tiempo real (Socket.IO, namespace `/tiempo-real`) | Siguiente avance |
 
 ## NestJS en JavaScript
 
