@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module';
 import { HealthController } from './health.controller';
+import { UsuariosModule } from './usuarios/usuarios.module';
 
 @Module({
   imports: [
@@ -19,6 +21,8 @@ import { HealthController } from './health.controller';
         synchronize: config.get('DB_SYNC') === 'true',
       }),
     }),
+    UsuariosModule,
+    AuthModule,
   ],
   controllers: [HealthController],
 })
